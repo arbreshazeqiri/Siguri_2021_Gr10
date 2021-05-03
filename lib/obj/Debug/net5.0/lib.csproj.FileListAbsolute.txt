@@ -22,3 +22,15 @@ C:\Users\Meshira\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.csproj.CoreCo
 C:\Users\Meshira\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.dll
 C:\Users\Meshira\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\ref\lib.dll
 C:\Users\Meshira\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.pdb
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\bin\Debug\net5.0\lib.deps.json
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\bin\Debug\net5.0\lib.dll
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\bin\Debug\net5.0\ref\lib.dll
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\bin\Debug\net5.0\lib.pdb
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.csprojAssemblyReference.cache
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.AssemblyInfoInputs.cache
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.AssemblyInfo.cs
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.dll
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\ref\lib.dll
+C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\lib\obj\Debug\net5.0\lib.pdb

@@ -10,7 +10,7 @@ namespace Base32C
 
     {
         private static readonly char[] _digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".ToCharArray();
-        public static void Enkodimi(string s)
+        public static string Enkodimi(string s)
         {
             var textb = s.Select(c => Convert.ToString(c, 2).PadLeft(8, '0')).ToList();
 
@@ -25,11 +25,21 @@ namespace Base32C
             var chunks = Split(sc, 5).ToList();
 
             List<string> modchunks = chunks.Select(FindPad).ToList();
-
-            for (int i = 0; i < modchunks.Count; i++)
+            modchunks = modchunks.Select(ToDec).ToList();
+            string res = "";
+            foreach (var chunk in modchunks)
             {
-                Console.WriteLine(modchunks[i]);
+                if (chunk == "=")
+                {
+                    res += chunk;
+                }
+                else
+                {
+                    res += _digits[Int32.Parse(chunk)];
+                }
+
             }
+            return res;
 
         }
 
@@ -61,10 +71,50 @@ namespace Base32C
             return bin;
         }
 
-        // public static void Dekodimi(string s)
-        // {
+         static string ToDec(string bin)
+        {
+            if (bin.Contains("x"))
+            {
+                return "=";
+            }
+            else
+            {
+                return Convert.ToInt32(bin, 2).ToString();
+            }
+        }
+         static string ToBin(string str)
+        {
+            if (str.Contains("="))
+            {
+                return "xxxxx";
+            }
+            else
+            {
+                return Convert.ToString(Convert.ToInt32(str, 10), 2).PadLeft(5, '0').ToString();
+            }
+        }
+         public static void Dekodimi(string s)
+         {
+             List<string> textb = Split(s, 1).ToList();
+            List<string> dec = new List<string>();
+            foreach (var chunk in textb)
+            {
+                if (chunk == "=")
+                {
+                    dec.Add("=");
+                }
+                else
+                {
+                    dec.Add(Array.IndexOf(_digits, char.Parse(chunk)).ToString());
+                }
+            }
 
-        // }
+            var moddec = dec.Select(ToBin).ToList();
+
+            for(int i=0;i<moddec.Count;i++){
+                Console.WriteLine(moddec[i]);
+            }
+         }
 
 
         public static void Main(string[] args)
@@ -74,7 +124,10 @@ namespace Base32C
                 Console.Write("Jepni fjalen per te enkoduar: ");
                 string input = Console.ReadLine();
                 string teksti = input.ToUpper();
-                Enkodimi(teksti);
+                string encoded = Enkodimi(teksti);
+                Console.WriteLine("Teksti i enkoduar: " + encoded);
+                Dekodimi(encoded);
+
             }
         }
     }

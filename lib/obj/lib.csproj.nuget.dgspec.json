@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Meshira\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Meshira\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Meshira\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj",
         "projectName": "lib",
-        "projectPath": "C:\\Users\\Meshira\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj",
-        "packagesPath": "C:\\Users\\Meshira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Meshira\\Desktop\\Siguri_2021_Gr10\\lib\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\Siguri_2021_Gr10\\lib\\lib.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\Siguri_2021_Gr10\\lib\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Meshira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
