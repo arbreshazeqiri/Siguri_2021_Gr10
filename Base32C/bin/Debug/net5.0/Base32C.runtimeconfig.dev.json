@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Meshira\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Meshira\\.nuget\\packages"
+    ]
+  }
+}
