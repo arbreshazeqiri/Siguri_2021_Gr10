@@ -71,7 +71,29 @@ namespace Base32C
             return bin;
         }
 
-         static string ToDec(string bin)
+        static string FindPad2(string bin)
+        {
+            int nrcount = 0;
+            int xcount = 0;
+            for (int i = 0; i < bin.Length; i++)
+            {
+                if (bin[i] == '1' || bin[i] == '0')
+                {
+                    nrcount++;
+                }
+                if (bin[i] == 'x')
+                {
+                    xcount++;
+                }
+                if (nrcount >= 1 && xcount >= 1)
+                {
+                    return bin.Replace('0', 'x');
+                }
+            }
+            return bin;
+        }
+
+        static string ToDec(string bin)
         {
             if (bin.Contains("x"))
             {
@@ -82,7 +104,7 @@ namespace Base32C
                 return Convert.ToInt32(bin, 2).ToString();
             }
         }
-         static string ToBin(string str)
+        static string ToBin(string str)
         {
             if (str.Contains("="))
             {
@@ -93,9 +115,25 @@ namespace Base32C
                 return Convert.ToString(Convert.ToInt32(str, 10), 2).PadLeft(5, '0').ToString();
             }
         }
-         public static void Dekodimi(string s)
-         {
-             List<string> textb = Split(s, 1).ToList();
+
+        static List<string> RemovePadding(List<string> l)
+        {
+            for (int i = 0; i < l.Count; i++)
+            {
+
+
+                if (l[i] == "xxxxxxxx")
+                {
+                    l.Remove(l[i]);
+                    i--;
+                }
+            }
+            return l;
+        }
+
+        public static string Dekodimi(string s)
+        {
+            List<string> textb = Split(s, 1).ToList();
             List<string> dec = new List<string>();
             foreach (var chunk in textb)
             {
@@ -110,11 +148,19 @@ namespace Base32C
             }
 
             var moddec = dec.Select(ToBin).ToList();
+            string komplet = String.Join("", moddec.ToArray());
 
-            for(int i=0;i<moddec.Count;i++){
-                Console.WriteLine(moddec[i]);
-            }
-         }
+            moddec = Split(komplet, 8).ToList();
+            moddec = RemovePadding(moddec);
+
+            List<string> moddec2 = moddec.Select(FindPad2).ToList();
+            moddec2 = RemovePadding(moddec2);
+            List<char> final = moddec2.Select(c => (char)Convert.ToInt32(c, 2)).ToList();
+            string res = String.Join("", final.ToArray());
+
+            return res;
+
+        }
 
 
         public static void Main(string[] args)
@@ -126,7 +172,7 @@ namespace Base32C
                 string teksti = input.ToUpper();
                 string encoded = Enkodimi(teksti);
                 Console.WriteLine("Teksti i enkoduar: " + encoded);
-                Dekodimi(encoded);
+                Console.WriteLine("Teksti i dekoduar:" + Dekodimi(encoded));
 
             }
         }

@@ -55,3 +55,22 @@ C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\lib.dll
 C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\lib.pdb
 C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.genruntimeconfig.cache
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.exe
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.deps.json
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.runtimeconfig.json
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.runtimeconfig.dev.json
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.dll
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\ref\Base32C.dll
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\Base32C.pdb
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\lib.dll
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\bin\Debug\net5.0\lib.pdb
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.csprojAssemblyReference.cache
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.AssemblyInfoInputs.cache
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.AssemblyInfo.cs
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.csproj.CoreCompileInputs.cache
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.csproj.CopyComplete
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.dll
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\ref\Base32C.dll
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.pdb
+C:\Users\Plus Computers\Desktop\Siguri_2021_Gr10\Base32C\obj\Debug\net5.0\Base32C.genruntimeconfig.cache
