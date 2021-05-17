@@ -133,8 +133,26 @@ namespace Base32C
 
         public static string Dekodimi(string s)
         {
+            if(s.Length % 8 != 0){
+                Console.WriteLine("Sigurohuni qe argumenti te jete ciphertext valid!");
+                System.Environment.Exit(1);
+            }
+
             List<string> textb = Split(s, 1).ToList();
+
+            for(int i=0; i<textb.Count; i++){
+            if(char.Parse(textb[i])!=61 && ((char.Parse(textb[i]) < 64 && char.Parse(textb[i]) > 57) | char.Parse(textb[i]) > 91 | char.Parse(textb[i])<50)){
+               Console.WriteLine("Sigurohuni qe argumenti te jete ciphertext valid!");
+                System.Environment.Exit(1);
+              }
+            if(char.Parse(textb[i])!=61 && (char.Parse(textb[i]) < 64 | char.Parse(textb[i]) > 91)){
+               Console.WriteLine("Sigurohuni qe argumenti te jete ciphertext valid!");
+                System.Environment.Exit(1);
+              }
+            }
+
             List<string> dec = new List<string>();
+
             foreach (var chunk in textb)
             {
                 if (chunk == "=")
@@ -143,24 +161,28 @@ namespace Base32C
                 }
                 else
                 {
-                    dec.Add(Array.IndexOf(_digits, char.Parse(chunk)).ToString());
+                    int i = Array.IndexOf(_digits, char.Parse(chunk));
+                    if(i == -1){
+                     Console.WriteLine("Sigurohuni qe argumenti te jete ciphertext valid!");
+                     System.Environment.Exit(1);
+                    }
+                    else{
+                    dec.Add(i.ToString());
+                    }
                 }
             }
-
             var moddec = dec.Select(ToBin).ToList();
             string komplet = String.Join("", moddec.ToArray());
-
             moddec = Split(komplet, 8).ToList();
-            moddec = RemovePadding(moddec);
-
             List<string> moddec2 = moddec.Select(FindPad2).ToList();
             moddec2 = RemovePadding(moddec2);
             List<char> final = moddec2.Select(c => (char)Convert.ToInt32(c, 2)).ToList();
             string res = String.Join("", final.ToArray());
-
             return res;
-
         }
+
+
+        
         static void Main(string[] args){
          if(args.Length == 2){
                 if(args[0].ToUpper()=="ENCODE"){
@@ -168,16 +190,19 @@ namespace Base32C
 
                 }
                 else if(args[0].ToUpper()=="DECODE"){
-                    Console.WriteLine(Dekodimi(args[1].ToUpper()));
-
+                    try {
+                      Console.WriteLine(Dekodimi(args[1].ToUpper()));
+                    }
+                    catch{
+                    Console.WriteLine("Gabim ne perkthim. Sigurohuni qe ciphertexti juaj te jete valid.");
+                    }
                 }
                 else{
                 Console.WriteLine("Argument accepted: encode/decode");
-  
                 }
             }
             else{
-                Console.WriteLine("arg[0] = encode/decode, arg[1] = plaintext/ciphertext");
+                Console.WriteLine("Gabim ne perkthim. Sigurohuni qe ciphertexti juaj te jete valid.\n args[0] = encode/decode, args[1] = plaintext/ciphertext");
             }
 
         }
