@@ -8,7 +8,7 @@ namespace Base32C
 {
     static class Program
     {
-                private static readonly char[] _digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".ToCharArray();
+       private static readonly char[] _digits = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".ToCharArray();
 
         public static string Enkodimi(string s)
         {
@@ -164,11 +164,11 @@ namespace Base32C
         static void Main(string[] args){
          if(args.Length == 2){
                 if(args[0].ToUpper()=="ENCODE"){
-                    Console.WriteLine(Enkodimi(args[1]));
+                    Console.WriteLine(Enkodimi(args[1].ToUpper()));
 
                 }
                 else if(args[0].ToUpper()=="DECODE"){
-                    Console.WriteLine(Dekodimi(args[1]));
+                    Console.WriteLine(Dekodimi(args[1].ToUpper()));
 
                 }
                 else{
